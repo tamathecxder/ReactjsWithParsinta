@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class App extends Component {
+class ClassExample extends Component {
   constructor() {
     super()
 
@@ -24,7 +24,8 @@ class App extends Component {
       name: `${this.state.firstname} ${this.state.lastname}`
     });
     
-    this.state.firstname = ''
+    this.state.firstname = '';
+    this.state.lastname = '';
   }
   
   render() { 
@@ -62,4 +63,4 @@ class App extends Component {
 
 }
 
-export default App;
+export default ClassExample;
