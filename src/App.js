@@ -7,9 +7,25 @@ class App extends Component {
     this.state = {
       firstname: '',
       lastname: '',
-      result: ''
+      name: ''
     };
+
   }
+
+  changeHandler = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
+
+  submitHandler = (e) => {
+    e.preventDefault();
+    this.setState({
+      name: `${this.state.firstname} ${this.state.lastname}`
+    });
+    console.log(this.state);
+  }
+  
   render() { 
     return(
       <div className="p-5">
