@@ -24,11 +24,12 @@ class App extends Component {
   
   render() {
     const user = this.state.user;
+    console.log(user.address);
     return(
       <div>
         <div>My name is {user.name}</div>
         <div>My name is {user.username}</div>
-        <div>My name is {user.address.city}</div>
+        <div>My name is {user.company ? user.company.name: ""}</div>
       </div>
     )
   }
