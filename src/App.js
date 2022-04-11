@@ -1,35 +1,40 @@
 import React, { Component } from "react";
-import axios from 'axios';
 
 class App extends Component {
   constructor() {
     super()
 
     this.state = {
-      user: []
-    }
-
+      firstname: '',
+      lastname: '',
+      result: ''
+    };
   }
-
-  getUser = async () => {
-    let response = await axios('https://jsonplaceholder.typicode.com/users/1');
-    this.setState({
-      user: response.data
-    });
-  }
-
-  componentDidMount() {
-    this.getUser();
-  }
-  
-  render() {
-    const user = this.state.user;
-    console.log(user.address);
+  render() { 
     return(
-      <div>
-        <div>My name is {user.name}</div>
-        <div>My name is {user.username}</div>
-        <div>My name is {user.company ? user.company.name: ""}</div>
+      <div className="p-5">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <div className="card">
+                <div className="card-header">Learn React JS</div>
+                <div className="card-body">
+                  <form onSubmit={this.submitHandler}>
+                    <div className="mb-4">
+                      <label htmlFor="firstname" className="form-label">Firstname</label>
+                      <input type="text" onChange={this.changeHandler} value={this.state.firstname} name="firstname" id="firstname" className="form-control" />
+                    </div>
+                    <div className="mb-4">
+                      <label htmlFor="lastname" className="form-label">lastname</label>
+                      <input type="text" onChange={this.changeHandler} value={this.state.lastname} name="lastname" id="lastname" className="form-control" />
+                    </div>
+                    <button type="submit" className="btn btn-primary btn-block">Show</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
