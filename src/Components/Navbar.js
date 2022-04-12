@@ -17,6 +17,9 @@ function Navbar({ children }) {
                 <NavLink className="nav-link" to="/">Home</NavLink>
               </li>
               <li className="nav-item">
+                <NavLink className="nav-link" to="/users">Users</NavLink>
+              </li>
+              <li className="nav-item">
                 <NavLink className="nav-link" to="/contact">Contact</NavLink>
               </li>
               <li className="nav-item">
