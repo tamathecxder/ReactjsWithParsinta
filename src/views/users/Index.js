@@ -24,7 +24,7 @@ function Index(props) {
         {
           users.map((user, index) => {
             return (
-              <div className="col-md-4 mb-3" key={index}>
+              <div className="col-md-4 col-xl-4 mb-3" key={index}>
                 <div className="card">
                   <div className="card-header bg-dark text-white">{user.name}</div>
                   <div className="card-body">
