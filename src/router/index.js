@@ -10,9 +10,30 @@ import Navbar from '../Components/Navbar';
 function Router(props) {
   return (
     <Routes>
-      <Route path="/" element={ <><Navbar/><Home/></> } />
-      <Route path="/contact" element={ <><Navbar/><Contact/></>} />
-      <Route path="/about" element={<><Navbar/><About/></>} />
+      <Route path="/" element=
+      {
+        <>
+          <Navbar>
+            <Home/>
+          </Navbar>
+        </> 
+      } />
+      <Route path="/contact" element=
+      {
+        <>
+          <Navbar>
+            <Contact/>
+          </Navbar>
+        </>
+      } />
+      <Route path="/about" element=
+      {
+        <>
+          <Navbar>
+            <About/>
+          </Navbar>
+        </>
+      } />
       <Route path="*" element={<NotFound />} />
       <Route path="/login" element={<Login />} />
     </Routes>

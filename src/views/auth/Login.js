@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Login(props) {
   return (
@@ -10,6 +11,13 @@ function Login(props) {
               className="img-fluid" alt="Phone image" />
           </div>
           <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+            <div className="my-2">
+                <NavLink to="/" className="text-info text-decoration-none">
+                  <h4 className="fw-bold">
+                    MyReact
+                  </h4>
+                </NavLink>
+            </div>
             <form>
               <div className="form-inline mb-4">
                 <label className="form-label" htmlFor="form1Example13">Email address</label>

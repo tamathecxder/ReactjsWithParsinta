@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-function Navbar(props) {
+function Navbar({ children }) {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
@@ -34,6 +34,10 @@ function Navbar(props) {
           </div>
         </div>
       </nav>
+
+      <div className="py-3">
+        {children}
+      </div>
     </div>
   );
 }
