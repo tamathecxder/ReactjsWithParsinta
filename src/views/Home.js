@@ -1,20 +1,14 @@
-import React, { useContext } from 'react';
-import { UserContext, UserProvider } from './context/User';
-
-const User = () => { 
-  const {user} = useContext(UserContext);
-  return (
-    <div>
-      My name is {user.name}
-    </div>
-  ) 
-}
+import React from 'react';
+import AuthUser from '../Components/AuthUser';
+import { UserProvider } from './context/User';
 
 function Home(props) {
   return (
     <div className="container">
       <UserProvider>
-        <User/>
+        <div className="d-flex">
+          <span>My name is &nbsp;</span><AuthUser/>
+        </div>
       </UserProvider>
     </div>
   );

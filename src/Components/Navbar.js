@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
+import { UserProvider } from '../views/context/User'
+import AuthUser from './AuthUser';
 function Navbar({ children }) {
   return (
     <div>
@@ -24,6 +25,13 @@ function Navbar({ children }) {
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/about">About</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/">
+                  <UserProvider>
+                    <AuthUser/>
+                  </UserProvider>
+                </NavLink>
               </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="dropdown07" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
