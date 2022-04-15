@@ -1,5 +1,10 @@
 import axios from 'axios'
-import { selector } from 'recoil';
+import { atom, selector } from 'recoil';
+
+const theme = atom({
+  key: 'switching-theme',
+  default: 'light',
+});
 
 const authUser = selector({
   key: 'authenticate-user',
@@ -17,4 +22,4 @@ const authUser = selector({
   }
 })
 
-export { authUser } 
+export { authUser, theme } 
